@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Insurance — Support</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <div style="font-weight:700">Acme Insurance</div>
+          <div style="color:var(--muted);font-size:13px">Help Centre — Corporate KB demo</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html">Booking</a>
+        <a href="support-page.html" class="active">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="support-grid">
+        <div>
+          <div class="card">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <h3 style="margin:0">Knowledge Base</h3>
+              <div style="color:var(--muted);font-size:13px">Integrated demo for Genesys</div>
+            </div>
+
+            <div class="kb-search">
+              <input id="kbQ" placeholder="Search articles, e.g. 'file a claim'">
+              <button id="kbSearchBtn" class="ghost">Search</button>
+            </div>
+
+            <div id="kbResults">
+              <!-- articles rendered by JS -->
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 8px">Popular guides</h4>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <button class="ghost" onclick="document.getElementById('kbQ').value='How to file a claim';document.getElementById('kbSearchBtn').click()">How to file a claim</button>
+              <button class="ghost" onclick="document.getElementById('kbQ').value='Renew my policy';document.getElementById('kbSearchBtn').click()">Renew my policy</button>
+              <button class="ghost" onclick="document.getElementById('kbQ').value='Cancel policy';document.getElementById('kbSearchBtn').click()">Cancel policy</button>
+              <button class="ghost" onclick="document.getElementById('kbQ').value='Discounts';document.getElementById('kbSearchBtn').click()">Discounts & bundles</button>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h4 style="margin:0 0 8px">Live chat (simulated)</h4>
+            <div style="background:#fff;border-radius:8px;padding:12px;color:#04263a">
+              <p style="margin:0 0 8px">Simulated agent replies — integrate Genesys Web Chat for live responses.</p>
+              <img src="car.svg" alt="chat" style="width:100%;border-radius:6px">
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px">
+            <h4 style="margin:0 0 8px">Contact</h4>
+            <p style="color:var(--muted);margin:0">Phone: 1800 000 000 · Email: corp@acmeinsurance.example</p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 Acme Insurance — Support demo for Genesys KB</footer>
+  </div>
+
+  <script>
+    window.demoArticles = [
+      {id:1,title:'How to file a claim',snippet:'Step-by-step guide to file a claim quickly using our corporate portal.'},
+      {id:2,title:'Renew your policy',snippet:'How renewals work for corporate accounts and automatic billing.'},
+      {id:3,title:'Cancel or change policy',snippet:'Process for cancelling or modifying a corporate policy.'},
+      {id:4,title:'Discounts & Bundles',snippet:'Multi-policy and corporate bundle discounts explained.'},
+      {id:5,title:'Track claim status',snippet:'Track your claim with transaction IDs and estimated timelines.'}
+    ];
+  </script>
+
+  <script src="main.js"></script>
+</body>
+</html>

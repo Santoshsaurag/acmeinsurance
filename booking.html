@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Insurance — Booking</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="logo">AI</div>
+        <div>
+          <div style="font-weight:700">Acme Insurance</div>
+          <div style="color:var(--muted);font-size:13px">Book a corporate consultation</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="booking.html" class="active">Booking</a>
+        <a href="support-page.html">Support</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="card">
+        <h3 style="margin-top:0">Schedule a consultation</h3>
+        <p style="color:var(--muted);margin-bottom:12px">Choose a time and our corporate specialist will contact you.</p>
+        <form id="bookingForm">
+          <div class="form-row">
+            <input id="b-name" placeholder="Full name" required />
+            <input id="b-email" placeholder="Work email" type="email" required />
+          </div>
+          <div class="form-row" style="margin-top:8px">
+            <select id="b-type">
+              <option>Corporate (Business)</option>
+              <option>Fleet / Vehicles</option>
+              <option>Property / Buildings</option>
+              <option>Employee Benefits</option>
+            </select>
+            <input id="b-date" type="date" />
+          </div>
+          <textarea id="b-note" placeholder="Notes (optional)"></textarea>
+          <div style="display:flex;gap:10px;align-items:center;margin-top:12px">
+            <button type="submit" class="btn">Submit booking</button>
+            <div id="bookingMsg" style="display:none" class="card" aria-live="polite">Your booking was received — demo confirmation.</div>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">© 2025 Acme Insurance — Demo site</footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
