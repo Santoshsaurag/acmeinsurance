@@ -125,6 +125,13 @@
     function selectClaim(type) {
       alert(`You selected: ${type.charAt(0).toUpperCase() + type.slice(1)}\n\nThis would open a form to collect details for your ${type} claim.`);
     }
+
+    // Auto-launch messenger when page opens
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        toggleMessenger();
+      }, 2000);
+    });
   </script>
   <script src="main.js"></script>
 </body>
